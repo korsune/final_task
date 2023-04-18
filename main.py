@@ -1,8 +1,10 @@
 from prime_numbers import is_number_prime
+from sort import sort
 
 if __name__ == '__main__':
     while True:
         print("1. Is number prime")
+        print("2. Sort sequence in ascending order")
         print("0. Exit")
         cmd = input("Choose item: ")
 
@@ -16,6 +18,15 @@ if __name__ == '__main__':
                     print ("Number is prime")
                 else:
                     print ("Number is not prime")
+        elif cmd == "2":
+            print("Enter a sequence of numbers, enter * in the end: ")
+            inp = input()
+            lst = list()
+            while inp != "*":
+                lst.append(int(inp))
+                inp = input()
+            print ("Sorted sequence: ", sort(lst))
+
         elif cmd == "0":
             break
         else:
