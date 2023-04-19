@@ -1,10 +1,12 @@
 from prime_numbers import is_number_prime
 from sort import sort
+from text import delete_text
 
 if __name__ == '__main__':
     while True:
         print("1. Is number prime")
         print("2. Sort sequence in ascending order")
+        print("3. Remove text in brackets")
         print("0. Exit")
         cmd = input("Choose item: ")
 
@@ -26,7 +28,9 @@ if __name__ == '__main__':
                 lst.append(int(inp))
                 inp = input()
             print ("Sorted sequence: ", sort(lst))
-
+        elif cmd == "3":
+            print("Enter text: ")
+            print ("Without text in brackets: ", delete_text(inp))
         elif cmd == "0":
             break
         else:
