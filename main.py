@@ -30,6 +30,7 @@ if __name__ == '__main__':
             print ("Sorted sequence: ", sort(lst))
         elif cmd == "3":
             print("Enter text: ")
+            inp = input()
             print ("Without text in brackets: ", delete_text(inp))
         elif cmd == "0":
             break
